@@ -1,5 +1,5 @@
-name: helloworld # 这是你的插件的唯一识别名。
-desc: 这是 AstrBot 的默认插件，支持关键词回复。 # 插件简短描述
-version: v1.3 # 插件版本号。格式：v1.1.1 或者 v1.1
-author: Soulter # 作者
-repo: https://github.com/Soulter/helloworld # 插件的仓库地址
+name: "LLM定时触发器"
+desc: "支持定时向指定用户/群组发送消息并触发LLM回复的插件。支持CRON表达式配置多个定时任务，可以为不同平台的不同用户/群组配置不同的LLM提供商。"
+version: "v1.0"
+author: "Assistant"
+repo: "https://github.com/your-repo/astrbot_plugin_LLMTrigger"

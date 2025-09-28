@@ -1,0 +1,38 @@
+{
+  "scheduler_check_interval": {
+    "type": "int",
+    "description": "调度器检查间隔(秒)",
+    "hint": "调度器检查任务的时间间隔，值越小越精确但消耗更多资源",
+    "default": 30
+  },
+  "platform_group_provider_map": {
+    "type": "list",
+    "description": "群组LLM触发配置",
+    "default": [],
+    "hint": "格式：消息平台名::群id::LLM提供商名::CRON表达式::定时消息内容，示例：aiocqhttp::123456789::openai::0 9 * * *::早上好，今天天气如何？"
+  },
+  "platform_friend_provider_map": {
+    "type": "list",
+    "description": "私聊LLM触发配置",
+    "default": [],
+    "hint": "格式：消息平台名::用户id::LLM提供商名::CRON表达式::定时消息内容，示例：aiocqhttp::987654321::openai::0 18 * * *::今天的学习计划是什么？"
+  },
+  "admin_user_id": {
+    "type": "string",
+    "description": "管理员用户ID",
+    "hint": "接收通知和管理任务的用户ID，用于发送执行结果通知",
+    "default": "admin"
+  },
+  "notification_on_failure": {
+    "type": "bool",
+    "description": "失败时发送通知",
+    "hint": "LLM触发失败时是否发送通知消息到管理员",
+    "default": true
+  },
+  "notification_on_success": {
+    "type": "bool",
+    "description": "成功时发送通知",
+    "hint": "LLM触发成功时是否发送通知消息，建议只对重要任务启用",
+    "default": false
+  }
+}
